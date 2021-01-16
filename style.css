@@ -2,6 +2,7 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Playfair Display", serif;
 }
 
 .upper-heads {
@@ -23,11 +24,15 @@
 .upper-heads li a {
   text-decoration: none;
   color: white;
+  transition: 0.6s linear;
+}
+.upper-heads li a :hover {
+  color: black;
+  border-bottom: 1px solid black;
 }
 
 .main {
   height: 100vh;
-  z-index: -1;
 }
 .main img {
   background-position: center;
@@ -61,7 +66,7 @@
   justify-content: space-around;
 }
 .counter .image img {
-  height: 85%;
+  height: 100%;
   width: 80%;
 }
 .counter .primaryInfo {
@@ -74,14 +79,23 @@
 .counter .primaryInfo .who {
   margin-bottom: 30px;
 }
+.counter .primaryInfo .who h1 {
+  font-weight: 600;
+}
 .counter .primaryInfo .who h4 {
   text-align: center;
 }
 .counter .primaryInfo .why {
   margin-bottom: 30px;
 }
+.counter .primaryInfo .why h1 {
+  font-weight: 600;
+}
 .counter .primaryInfo .why h4 {
   text-align: center;
+}
+.counter .primaryInfo .aim h1 {
+  font-weight: 600;
 }
 .counter .primaryInfo .aim h4 {
   text-align: center;
@@ -184,6 +198,8 @@ body {
 }
 
 .carousel-title {
+  font-weight: bold;
+  padding-top: 2rem;
   margin-bottom: 5rem;
   text-align: center;
 }

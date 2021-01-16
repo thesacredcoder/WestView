@@ -1,0 +1,214 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.upper-heads {
+  display: block;
+  float: right;
+  margin-right: 6px;
+  margin-top: 6px;
+  position: absolute;
+  top: 0%;
+  right: 0;
+  font-size: 16px;
+}
+.upper-heads li {
+  display: block;
+  float: left;
+  margin: 10px;
+  list-style: none;
+}
+.upper-heads li a {
+  text-decoration: none;
+  color: white;
+}
+
+.main {
+  height: 100vh;
+  z-index: -1;
+}
+.main img {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.6;
+}
+
+.content {
+  width: 80vw;
+  position: relative;
+  margin-top: 3rem;
+  margin-right: 8px;
+  margin-left: 10rem;
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 20px;
+  padding: 5rem;
+  display: flex;
+  justify-content: space-around;
+}
+.content h1 {
+  margin-bottom: 8px;
+}
+
+.counter {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: space-around;
+}
+.counter .image img {
+  height: 85%;
+  width: 80%;
+}
+.counter .primaryInfo {
+  width: 50%;
+  height: 60%;
+}
+.counter .primaryInfo h1 {
+  text-align: center;
+}
+.counter .primaryInfo .who {
+  margin-bottom: 30px;
+}
+.counter .primaryInfo .who h4 {
+  text-align: center;
+}
+.counter .primaryInfo .why {
+  margin-bottom: 30px;
+}
+.counter .primaryInfo .why h4 {
+  text-align: center;
+}
+.counter .primaryInfo .aim h4 {
+  text-align: center;
+}
+
+/* external flickity */
+/* external css: flickity.css */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  background: black;
+}
+
+.carousel-cell {
+  width: 70%;
+  height: 200px;
+  /* flex-box, center image in cell */
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+.carousel-cell img {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  /* dim unselected */
+  opacity: 0.7;
+  -webkit-transform: scale(0.85);
+  transform: scale(0.85);
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transition: opacity 0.3s, -webkit-transform 0.3s, transform 0.3s, -webkit-filter 0.3s, filter 0.3s;
+  transition: opacity 0.3s, transform 0.3s, filter 0.3s;
+}
+
+/* brighten selected image */
+.carousel-cell.is-selected img {
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -webkit-filter: none;
+  filter: none;
+}
+
+@media screen and (min-width: 768px) {
+  .carousel-cell {
+    height: 400px;
+  }
+}
+@media screen and (min-width: 960px) {
+  .carousel-cell {
+    width: 60%;
+  }
+}
+/* buttons, no circle */
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  opacity: 0.6;
+}
+
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: white;
+}
+
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+
+/* closer to edge */
+.flickity-prev-next-button.previous {
+  left: 0;
+}
+
+.flickity-prev-next-button.next {
+  right: 0;
+}
+
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+.carousel-title {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+.form {
+  background-color: rgba(176, 181, 184, 0.6);
+  width: 80vw;
+  height: 100%;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  padding: 3rem;
+  border-radius: 20px;
+}
+.form h1 {
+  text-align: center;
+  margin-top: 16px;
+  margin-bottom: 2rem;
+}
+.form form {
+  margin-left: 8px;
+  width: 100%;
+}
+
+#emailInput {
+  margin-bottom: 24px;
+}
+
+/*# sourceMappingURL=style.css.map */

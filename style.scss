@@ -54,7 +54,7 @@
   }
 }
 header {
-  background-image: //linear-gradient(hsla(0, 50%, 42%, 0.199),rgba(0,0,0,0))
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
     url(kids.jpg);
   background-position: center;
 
@@ -77,8 +77,9 @@ header {
   //z-index: -1;
   img {
     background-image: linear-gradient(
-      rgba(0, 0, 0, 1),
-      rgba(0, 0, 0, 1) url(kids.jpg)
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5),
+      url(kids.jpg)
     );
     clear: both;
     background-position: center;
@@ -102,6 +103,7 @@ header {
   padding: 5rem;
   display: flex;
   justify-content: space-around;
+  align-items: center;
 
   h1 {
     // display: block;
@@ -113,20 +115,25 @@ header {
 .counter {
   margin-top: 3rem;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
 
   .image {
-    // margin-right: 10%;
+    margin-right: -35%;
+    margin-left: 3%;
     img {
-      height: 100%;
-      width: 80%;
+      height: 95%;
+      width: 50%;
+      padding-top: 32px;
+      flex-shrink: 0.5;
     }
   }
 
   .primaryInfo {
     // margin-left: 10%;
-    width: 50%;
-    height: 60%;
+    width: 90%;
+    height: 50%;
+    flex-grow: 1;
+    margin-right: 5%;
     h1 {
       text-align: center;
     }
@@ -258,12 +265,12 @@ body {
 .carousel-title {
   font-weight: bold;
   padding-top: 2rem;
-  margin-bottom: 5rem;
+  margin-bottom: 2.5rem;
   text-align: center;
 }
 
 .form {
-  background-color: rgba(176, 181, 184, 0.6);
+  background-color: rgba(176, 181, 184, 0.4);
   width: 80vw;
   height: 100%;
   margin-top: 3rem;
@@ -271,6 +278,7 @@ body {
   padding: 3rem;
   //   padding-left: 2rem;
   border-radius: 20px;
+  margin-bottom: 10px;
 
   h1 {
     text-align: center;
@@ -286,4 +294,26 @@ body {
 
 #emailInput {
   margin-bottom: 24px;
+}
+
+.context {
+  // padding-top: 32px;
+  // margin-top: 30%;
+  position: absolute;
+  top: 50%;
+  left: 32px;
+  background: white;
+  width: 50%;
+  height: 60px;
+  font-size: 2.5rem;
+  margin: 4px 6px;
+  font-weight: 700;
+  // margin-left: 6px;
+
+  small {
+    border: 3px solid white;
+    padding: 8px;
+    margin-top: 16px;
+    color: white;
+  }
 }

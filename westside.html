@@ -20,8 +20,39 @@
       href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,700&display=swap"
       rel="stylesheet"
     />
+
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 20px;
+      }
+
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: black;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 20px;
+      }
+
+      #myBtn:hover {
+        background-color: #555;
+      }
+      </style>
+
   </head>
   <body>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">👆</button>
+
     <header>
       <div class="main">
         <!-- <img src="kids.jpg" alt="happy kids" class="image" /> -->
@@ -32,9 +63,9 @@
         <div class="upper-heads">
           <ul>
             <li><a href="#">Home</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-            <li><a href="#">Why?</a></li>
+            <li><a href="#who">About Us</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#why">Why?</a></li>
             <li class="fix"><a href="#">Donate</a></li>
           </ul>
         </div>
@@ -49,7 +80,7 @@
     </div> -->
     <div class="content">
       <section id="current-users">
-            <h1 id="total-users" style="font-size: 4rem;">103,001</h1>  
+            <h1 id="total-users" style="font-size: 4rem;">103,001</h1>
     </section>
       <h1>
         Members <br />
@@ -63,7 +94,7 @@
         <img src="kids1.jpeg" alt="" />
       </div>
       <div class="primaryInfo">
-        <div class="who">
+        <section id="who">
           <h1>Who we are?</h1>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
@@ -75,9 +106,9 @@
             repellendus magnam molestias deserunt atque facilis in nesciunt a
             modi consequatur quibusdam!
           </p>
-        </div>
+        </section>
         <br />
-        <div class="why">
+        <section id="why">
           <h1>Why we are?</h1>
           <p class="text-muted">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
@@ -87,7 +118,7 @@
             repellendus magnam molestias deserunt atque facilis in nesciunt a
             modi consequatur quibusdam!
           </p>
-        </div>
+        </section>
         <div class="aim">
           <h1>OUR AIM</h1>
           <p class="text-muted">
@@ -137,11 +168,11 @@
           alt="drizzle"
         />
       </div>
-      
+
     </div>
 
     <!--Form-->
-    <div class="form">
+    <section id='contact' class="form">
       <h1>Wanna JOIN?</h1>
       <div class="form-row">
         <div class="col">
@@ -169,8 +200,30 @@
           placeholder="Email"
         />
       </div>
-    </div>
-  
+      <button type="button" class="btn btn-primary">Send</button>
+    </section>
+
+    <script>
+      //Get the button
+      var mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function() {scrollFunction()};
+
+      function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+      </script>
   </body>
 
   <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>
